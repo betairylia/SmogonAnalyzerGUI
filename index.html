@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="mainStyle.css">
+        <link rel="stylesheet" href="navigation.css">
+        <link rel="stylesheet" href="content.css">
+        <title>SmogonAnalyzerGUI_PreDev_0.0.1</title>
+    </head>
+    <body>
+        <nav class="naviBar">
+            <div id="naviHeaderArea">
+                <h1 class="naviHeader">A <strong>Pokemon</strong> Analyzer</h1>
+                <h4 class="naviHeader">Menu</h4>
+            </div>
+
+            <div id="naviCategory-stats" class="naviCategoryArea">
+                <h5 class="naviCategory">Smogon Stats</h5>
+                <button class="naviButton" id="naviButton-gen7ou"
+                    onclick="button_gen7ou_onclick()">
+                    Gen7 <strong>OU</strong>
+                </button>
+                <button class="naviButton" id="naviButton-gen7doublesou"
+                    onclick="button_gen7doublesou_onclick()">
+                    Gen7 <strong>Doubles OU</strong>
+                </button>
+                <button class="naviButton" id="naviButton-gen7pokebankou"
+                    onclick="button_gen7pokebankou_onclick()">
+                    Gen7 <strong>Pokebank OU</strong>
+                </button>
+                <button class="naviButton" id="naviButton-gen7pokebankdoublesou"
+                    onclick="button_gen7pokebankdoublesou_onclick()">
+                    Gen7 <strong>Pokebank Doubles OU</strong>
+                </button>
+            </div>
+
+            <div id="naviCategory-calc" class="naviCategoryArea">
+                <h5 class="naviCategory">Calculator & Analyzer</h5>
+                <button class="naviButton"><strong>Damage</strong> calculator</button>
+                <button class="naviButton"><strong>Defensive</strong> calculator</button>
+                <button class="naviButton"><strong>Offensive</strong> calculator</button>
+        </nav>
+        <main class="mainArea">
+            <section id="stats-gen7ou" class="section js-section">
+                <h5>Gen7 OU</h5>
+            </section>
+            <section id="stats-gen7doublesou" class="section js-section">
+                <h5>Gen7 Doubles OU</h5>
+            </section>
+            <section id="stats-gen7pokebankou" class="section js-section">
+                <h5>Gen7 Pokebank OU</h5>
+            </section>
+            <section id="stats-gen7pokebankdoublesou" class="section js-section">
+                <h5>Gen7 Pokebank Doubles OU</h5>
+            </section>
+        </main>
+
+        <script>
+            function hasClass(obj, cls)
+            {
+                return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+            }
+
+            function addClass(obj, cls)
+            {
+                if(!this.hasClass(obj, cls))
+                {
+                    obj.className += " " + cls;
+                }
+            }
+
+            function removeClass(obj, cls)
+            {
+                if(this.hasClass(obj, cls))
+                {
+                    obj.className = obj.className.replace(
+                        new RegExp('(\\s|^)' + cls + '(\\s|$)'), '')
+                }
+            }
+
+            function clearAllSections()
+            {
+                var sections = document.getElementsByClassName("js-section");
+                // console.log(sections);
+
+                var lenth = sections.length;
+                for(var i = 0; i < lenth; i++)
+                {
+                    this.removeClass(sections[i], "is-shown");
+                }
+
+                var buttons = document.getElementsByClassName("naviButton");
+
+                lenth = buttons.length;
+                for(i = 0; i < lenth; i++)
+                {
+                    buttons[i].style.backgroundColor = "";
+                }
+            }
+
+            function button_gen7ou_onclick()
+            {
+                this.clearAllSections();
+                this.addClass(document.getElementById("stats-gen7ou"), "is-shown");
+
+                document.getElementById("naviButton-gen7ou").style.backgroundColor = "#ccc";
+            }
+
+            function button_gen7doublesou_onclick()
+            {
+                this.clearAllSections();
+                this.addClass(document.getElementById("stats-gen7doublesou"), "is-shown");
+
+                document.getElementById("naviButton-gen7doublesou").style.backgroundColor = "#ccc";
+            }
+
+            function button_gen7pokebankou_onclick()
+            {
+                this.clearAllSections();
+                this.addClass(document.getElementById("stats-gen7pokebankou"), "is-shown");
+
+                document.getElementById("naviButton-gen7pokebankou").style.backgroundColor = "#ccc";
+            }
+
+            function button_gen7pokebankdoublesou_onclick()
+            {
+                this.clearAllSections();
+                this.addClass(document.getElementById("stats-gen7pokebankdoublesou"), "is-shown");
+
+                document.getElementById("naviButton-gen7pokebankdoublesou").style.backgroundColor = "#ccc";
+            }
+        </script>
+    </body>
+</html>

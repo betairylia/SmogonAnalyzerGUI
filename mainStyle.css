@@ -1,0 +1,45 @@
+.naviBar
+{
+    width: 300px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background-color: #f7f7f7;
+
+    border-right: 1px solid #ccc;
+}
+
+.mainArea
+{
+    /*margin-left: 2rem;*/
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.content
+{
+    padding: 40px;
+}
+
+html
+{
+    font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    height: 100%;
+    display: flex;
+}
+
+*
+{
+    box-sizing: border-box;
+}

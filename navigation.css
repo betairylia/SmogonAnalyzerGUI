@@ -1,0 +1,52 @@
+#naviHeaderArea
+{
+    padding: 25px;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 1em;
+}
+
+.naviHeader
+{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.naviCategory
+{
+    margin: 8px auto;
+    margin-left: 1.5em;
+    font-size: 1.3em;
+}
+
+.naviCategoryArea
+{
+    margin: 25px auto;
+}
+
+.naviButton
+{
+    padding: 4px;
+    padding-left: 3em;
+
+    display: block;
+    width: 100%;
+    line-height: 2;
+    text-align: left;
+    font: inherit;
+    color: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: default;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5
+{
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+strong
+{
+    font-weight: bold;
+}
